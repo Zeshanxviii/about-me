@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+  
+  ::selection {
+    background-color: #e0e7ff;
+    color: #3730a3;
+  }
+}
+
+/* Custom interactive highlighting */
+.keyword-highlight {
+  display: inline-block;
+  font-weight: 600;
+  color: #0f172a;
+  padding: 0 0.1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.keyword-highlight:hover {
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+/* Subtle accent highlight (amber/emerald for achievements) */
+.stat-highlight {
+  display: inline-block;
+  font-weight: 600;
+  color: #0f172a;
+  padding: 0 0.1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.stat-highlight:hover {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+/* Card hover animation */
+.interactive-card {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* Dimming effect when filtering */
+.is-dimmed {
+  opacity: 0.28;
+  filter: grayscale(40%);
+  transform: scale(0.99);
+}
+
+.is-spotlighted {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 2px #c7d2fe, 0 16px 32px -8px rgba(99, 102, 241, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Subtle background grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* CV typography */
+.cv-heading {
+  font-family: 'Schibsted Grotesk', 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+}
+
+.cv-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.cv-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
